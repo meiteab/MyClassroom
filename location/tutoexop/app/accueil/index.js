@@ -44,6 +44,8 @@ const page = () => {
               
               <View>
                 <Text>{item.location_city}</Text> 
+                <Text>{item.location_city}</Text> 
+
                  </View>
             </View>
           </View>
