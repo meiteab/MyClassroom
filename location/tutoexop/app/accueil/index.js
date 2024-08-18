@@ -5,6 +5,7 @@ import {
   FlatList,
   ImageBackground,
 } from "react-native";
+import AntDesign from "@expo/vector-icons/AntDesign";
 import EvilIcons from "@expo/vector-icons/EvilIcons";
 import houseList from "@/assets/datas/datas-appartement.json";
 
@@ -41,12 +42,13 @@ const page = () => {
               </View>
             </ImageBackground>
             <View>
-              
-              <View>
-                <Text>{item.location_city}</Text> 
-                <Text>{item.location_city}</Text> 
-
-                 </View>
+              <View style={styles.rowBetween}>
+                <Text>{item.location_city}</Text>
+                <View style={styles.tagContainer}>
+                  <Text style={styles.tagText}>5.0</Text>
+                  <AntDesign name="star" size={20} color="white" />
+                </View>
+              </View>
             </View>
           </View>
         )}
@@ -88,6 +90,22 @@ const styles = StyleSheet.create({
     color: "white",
     padding: 4,
   },
+  rowBetween:{
+   flexDirection: 'row',
+   alignItems: 'center',
+   justifyContent: 'space-between'
+  },
+  tagContainer: {
+    backgroundColor: "grey",
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 5,
+    borderRadius: 5,
+    padding:5
+  },
+  tagText: {
+    color: 'white'
+  }
 });
 
 export default page;
