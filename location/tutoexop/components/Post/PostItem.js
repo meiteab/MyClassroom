@@ -8,12 +8,13 @@ const PostItem = ({postData}) => {
   };
   return (
     <Pressable style={styles.root} onPress={auClick}>
-      <Text>{postData.userName}</Text>
+      <Text>{postData.userName}m</Text>
     </Pressable>
   );
 };
 
 const styles = StyleSheet.create({
+
   root: {
     borderRadius: 15,
     backgroundColor: "purple",
